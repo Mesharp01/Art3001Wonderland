@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index2</title>
+<script type="text/javascript">
+<link rel="stylesheet" href="style.css">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function MM_DW_effectPuff(obj,method,effect,percent,speed)
+{
+    obj[method](effect, { percent:percent}, speed);
+}
+</script>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="MM_preloadImages('blobs/yellow-splash.png','blobs/pink-splash.png')">
+  <p>
+  <map name="Map">
+    <area shape="rect" coords="10,44,140,107" href="blobs/green-paint-splatter-th.png">
+  </map>
+  </p>
+  <p>
+  <map name="Map">
+  </map>
+  <a href="blobs/black-splash.png"><img src="blobs/blobultrathink.png" alt="" width="150" height="150"/></a>BLOBS!  </p>
+<p><img src="blobs/abstract-1781486__180.png" alt="" width="256" height="256" onClick="MM_DW_effectPuff($(this),'hide','puff',150,1000)"/>GO!</p>
+  </p>
+<p><a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('rolloverBlob','','blobs/yellow-splash.png',1)"><img src="blobs/pink-splash.png" alt="" width="100" height="81" id="rolloverBlob"></a>&nbsp;SPLAT! TO AN ADVENTURE...</p>
+<p><a href="blobs/black-splash.png" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('RolloverBlob2','','blobs/pink-splash.png',1)"><img src="blobs/blue-splash.png" alt="" width="100" height="86" usemap="#RolloverBlob2Map" id="RolloverBlob2">
+    <map name="RolloverBlob2Map">
+      <area shape="rect" coords="6,7,93,76" href="blobs/black-splash.png">
+    </map>
+</a> NEW BLOBS ALSO GO SPLAT! AND SOMETIMES THEY EVEN MAKE NEW BLOBS...</p>
+</body>
+</html>
